@@ -11,170 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./w3.css" />
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-      h1 {
-        font-weight: 600;
-      }
-      h4 {
-        font-weight: 500;
-      }
-      img {
-        object-fit: cover;
-      }
-      .loading {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        z-index: 1;
-        transition: 0.5s;
-      }
-      .loading.active {
-        opacity: 0;
-        visibility: hidden;
-      }
-      svg.tea {
-        --secondary: #33406f;
-      }
-      svg.tea #teabag {
-        transform-origin: top center;
-        transform: rotate(3deg);
-        animation: swing 2s infinite;
-      }
-      svg.tea #steamL {
-        stroke-dasharray: 13;
-        stroke-dashoffset: 13;
-        animation: steamLarge 2s infinite;
-      }
-      svg.tea #steamR {
-        stroke-dasharray: 9;
-        stroke-dashoffset: 9;
-        animation: steamSmall 2s infinite;
-      }
-      @-moz-keyframes swing {
-        50% {
-          transform: rotate(-3deg);
-        }
-      }
-      @-webkit-keyframes swing {
-        50% {
-          transform: rotate(-3deg);
-        }
-      }
-      @-o-keyframes swing {
-        50% {
-          transform: rotate(-3deg);
-        }
-      }
-      @keyframes swing {
-        50% {
-          transform: rotate(-3deg);
-        }
-      }
-      @-moz-keyframes steamLarge {
-        0% {
-          stroke-dashoffset: 13;
-          opacity: 0.6;
-        }
-        100% {
-          stroke-dashoffset: 39;
-          opacity: 0;
-        }
-      }
-      @-webkit-keyframes steamLarge {
-        0% {
-          stroke-dashoffset: 13;
-          opacity: 0.6;
-        }
-        100% {
-          stroke-dashoffset: 39;
-          opacity: 0;
-        }
-      }
-      @-o-keyframes steamLarge {
-        0% {
-          stroke-dashoffset: 13;
-          opacity: 0.6;
-        }
-        100% {
-          stroke-dashoffset: 39;
-          opacity: 0;
-        }
-      }
-      @keyframes steamLarge {
-        0% {
-          stroke-dashoffset: 13;
-          opacity: 0.6;
-        }
-        100% {
-          stroke-dashoffset: 39;
-          opacity: 0;
-        }
-      }
-      @-moz-keyframes steamSmall {
-        10% {
-          stroke-dashoffset: 9;
-          opacity: 0.6;
-        }
-        80% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-        100% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-      }
-      @-webkit-keyframes steamSmall {
-        10% {
-          stroke-dashoffset: 9;
-          opacity: 0.6;
-        }
-        80% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-        100% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-      }
-      @-o-keyframes steamSmall {
-        10% {
-          stroke-dashoffset: 9;
-          opacity: 0.6;
-        }
-        80% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-        100% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-      }
-      @keyframes steamSmall {
-        10% {
-          stroke-dashoffset: 9;
-          opacity: 0.6;
-        }
-        80% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-        100% {
-          stroke-dashoffset: 27;
-          opacity: 0;
-        }
-      }
-    </style>
-    <title>Trending Movie</title>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Trending Movies</title>
   </head>
   <body>
     <div class="loading">
@@ -222,7 +60,7 @@
       </svg>
     </div>
 
-    <img src="./img/Banner.jpg" alt="Banner" width="100%" height="404px" />
+    <img src="./img/Banner.jpg" alt="Banner" class="banner" />
 
     <div class="w3-bar w3-black">
       <button class="w3-bar-item w3-button" onclick="openMovie('Home')">
@@ -265,11 +103,27 @@
     >
       <center>
         <h1>Avatar: The Way of Water</h1>
-        <h4>Rating: 7.9</h4>
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="star"
+            id="iconContext-star"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            role="presentation"
+          >
+            <path
+              d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+            ></path>
+          </svg>
+          7.9
+        </h4>
         <img
           src="./img/Avatar The Way of Water.jpg"
           alt="Avatar: The Way of Water"
-          height="500px"
+          height="400px"
         />
         <p>
           Jake Sully and Ney'tiri have formed a family and are doing everything
@@ -288,8 +142,24 @@
     >
       <center>
         <h1>The Menu</h1>
-        <h4>Rating: 7.3</h4>
-        <img src="./img/The Menu.jpg" alt="The Menu" height="500px" />
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="star"
+            id="iconContext-star"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            role="presentation"
+          >
+            <path
+              d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+            ></path>
+          </svg>
+          7.3
+        </h4>
+        <img src="./img/The Menu.jpg" alt="The Menu" height="400px" />
         <p>
           The film, penned by Will Tracy and Seth Reiss, "focuses on a young
           couple who visits an exclusive destination restaurant on a remote
@@ -310,11 +180,27 @@
     >
       <center>
         <h1>Black Panther: Wakanda Forever</h1>
-        <h4>Rating: 7.2</h4>
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="star"
+            id="iconContext-star"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            role="presentation"
+          >
+            <path
+              d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+            ></path>
+          </svg>
+          7.2
+        </h4>
         <img
           src="./img/Black Panther Wakanda Forever.jpg"
           alt="Black Panther: Wakanda Forever"
-          height="500px"
+          height="400px"
         />
         <p>
           Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to
@@ -335,8 +221,24 @@
     >
       <center>
         <h1>Wednesday</h1>
-        <h4>Rating: 8.2</h4>
-        <img src="./img/Wednesday.jpg" alt="Wednesday" height="500px" />
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="star"
+            id="iconContext-star"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            role="presentation"
+          >
+            <path
+              d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+            ></path>
+          </svg>
+          8.2
+        </h4>
+        <img src="./img/Wednesday.jpg" alt="Wednesday" height="400px" />
         <p>
           While attending Nevermore Academy, Wednesday Addams attempts to master
           her emerging psychic ability, <br />
@@ -353,11 +255,27 @@
     >
       <center>
         <h1>Everything Everywhere All at Once</h1>
-        <h4>Rating: 8.0</h4>
+        <h4>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="star"
+            id="iconContext-star"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            role="presentation"
+          >
+            <path
+              d="M12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
+            ></path>
+          </svg>
+          8.0
+        </h4>
         <img
           src="./img/Everything Everywhere All at Once.jpg"
           alt="Everything Everywhere All at Once"
-          height="500px"
+          height="400px"
         />
         <p>
           A Chinese immigrant gets unwillingly embroiled in an epic adventure
@@ -375,7 +293,7 @@
     >
       <center>
         <h1>My Profile</h1>
-        <img src="./img/Profile.jpg" alt="Ariq Hikari Hidayat" height="500px" />
+        <img src="./img/Profile.jpg" alt="Ariq Hikari Hidayat" height="300px" />
         <h5>
           <table>
             <tr>
@@ -401,15 +319,15 @@
     <script>
       function openMovie(namaMovie) {
         var i;
-        var x = document.getElementsByClassName('movie');
+        var x = document.getElementsByClassName("movie");
         for (i = 0; i < x.length; i++) {
-          x[i].style.display = 'none';
+          x[i].style.display = "none";
         }
-        document.getElementById(namaMovie).style.display = 'block';
+        document.getElementById(namaMovie).style.display = "block";
       }
 
       setTimeout(() => {
-        document.querySelector('.loading').classList.add('active');
+        document.querySelector(".loading").classList.add("active");
       }, 1000);
     </script>
   </body>
